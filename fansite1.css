@@ -9,6 +9,8 @@ main {
     margin-top: 50px;
     font-family: "Roboto", sans-serif;
 }
+
+/* Header + Barre de nav */
 header {
     font-family: 'Roboto', sans-serif;
     display: flex;
@@ -23,13 +25,6 @@ header li {
     list-style: none;
     display: inline-block;
     padding : 0 20px;
-}
-
-div.container {
-    box-shadow: 0 1px 8px #ddd;
-    background-color: antiquewhite;
-    width: 90%;
-    margin: auto;
 }
 
 nav.mobile {
@@ -87,6 +82,16 @@ nav.mobile {
     display: none;
 }
 
+/* Contenu principal */
+
+div.container {
+    box-shadow: 0 1px 8px #ddd;
+    background-color: antiquewhite;
+    width: 90%;
+    margin: auto;
+}
+
+/* Responsive */
 @media (max-width: 768px){
     nav.mobile {
         display: flex;
