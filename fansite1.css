@@ -91,6 +91,33 @@ div.container {
     margin: auto;
 }
 
+/* Titre */
+div.title{
+    display: flex;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    padding: 0 40px;
+    margin: auto;
+    justify-content: center;
+}
+
+/* Description avec Images (en ligne) */
+div.descavecimg {
+    display: flex;
+    flex-direction: row;
+    padding: 20px 40px;
+}
+
+/* Zone de texte */
+div.text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 50%;
+    margin: 2px;
+}
 /* Responsive */
 @media (max-width: 768px){
     nav.mobile {
