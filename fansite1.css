@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    font-family: "Roboto", sans-serif;
+}
+header {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding : 20px 50px;
+    box-shadow: 0 1px 8px #636363;
+    background-color: #717070;
+}
+
+header li {
+    list-style: none;
+    display: inline-block;
+    padding : 0 20px;
+}
+
+div.container {
+    box-shadow: 0 1px 8px #ddd;
+    background-color: antiquewhite;
+    width: 90%;
+    margin: auto;
+}
+
+nav.mobile {
+    display: none;
+}
+
+.mobilenav {
+    display: none;
+}
+/* Bouton Burger */
+.burger {
+    cursor: pointer;
+    display: inline-block;
+    width: 30px;
+    height: 25px;
+    position: relative;
+}
+
+.burger span {
+    display: block;
+    background-color: #333;
+    height: 3px;
+    width: 100%;
+    border-radius: 2px;
+    position: absolute;
+    left: 0;
+    transition: 0.3s ease;
+}
+
+.burger span:nth-child(1) {
+    top: 0;
+}
+
+.burger span:nth-child(2) {
+    top: 10px;
+}
+
+.burger span:nth-child(3) {
+    top: 20px;
+}
+.buttonmenu:checked + .burger span:nth-child(1) {
+    transform: rotate(45deg);
+    top: 10px;
+}
+
+.buttonmenu:checked + .burger span:nth-child(2) {
+    opacity: 0;
+}
+
+.buttonmenu:checked + .burger span:nth-child(3) {
+    transform: rotate(-45deg);
+    top: 10px;
+}
+.buttonmenu {
+    display: none;
+}
+
+@media (max-width: 768px){
+    nav.mobile {
+        display: flex;
+    }
+    nav.pc {
+        display: none;
+    }
+    .buttonmenu:checked + .mobilenav{
+        display: flex;
+        flex-direction: column;
+        
+    }
+}
