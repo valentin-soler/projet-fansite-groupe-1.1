@@ -109,6 +109,15 @@ article.descavecimg {
     padding: 20px 40px;
 }
 
+img.imgdesc {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: inherit;
+}
+
 /* Zone de texte */
 div.text {
     display: flex;
