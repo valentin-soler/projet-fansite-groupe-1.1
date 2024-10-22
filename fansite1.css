@@ -27,7 +27,7 @@ header li {
     padding : 0 20px;
 }
 
-nav.mobile {
+nav.nav-mobile {
     display: none;
 }
 
@@ -120,10 +120,10 @@ div.text {
 }
 /* Responsive */
 @media (max-width: 768px){
-    nav.mobile {
+    nav.nav-mobile {
         display: flex;
     }
-    nav.pc {
+    nav.nav-pc {
         display: none;
     }
     .buttonmenu:checked + .mobilenav{
