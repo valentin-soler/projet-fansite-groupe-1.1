@@ -123,6 +123,18 @@ div.zone-article{
     display: flex;
     flex-direction: row;
 }
+
+/* Dicographie */
+article.discographie {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 40px;
+}
+
+article.discographie-album{
+    display: flex;
+    flex-direction: row;
+}
 /* Responsive */
 @media (max-width: 768px){
     nav.nav-mobile {
