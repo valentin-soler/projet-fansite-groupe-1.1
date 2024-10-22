@@ -130,10 +130,23 @@ article.discographie {
     flex-direction: column;
     padding: 20px 40px;
 }
-
 article.discographie-album{
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+}
+
+div.article-disco {
+    display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+img.img-discographie {
+    width: 100px;
+    height: 100px;
 }
 /* Responsive */
 @media (max-width: 768px){
