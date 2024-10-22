@@ -92,7 +92,7 @@ div.container {
 }
 
 /* Titre */
-div.title{
+section.title{
     display: flex;
     font-weight: 400;
     font-style: normal;
@@ -103,9 +103,9 @@ div.title{
 }
 
 /* Description avec Images (en ligne) */
-div.descavecimg {
+article.descavecimg {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     padding: 20px 40px;
 }
 
@@ -117,6 +117,11 @@ div.text {
     text-align: center;
     width: 50%;
     margin: 2px;
+}
+
+div.zone-article{
+    display: flex;
+    flex-direction: row;
 }
 /* Responsive */
 @media (max-width: 768px){
