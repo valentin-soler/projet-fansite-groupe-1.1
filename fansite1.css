@@ -107,6 +107,8 @@ article.descavecimg {
     display: flex;
     flex-direction: column;
     padding: 20px 40px;
+    justify-content: center;
+    align-items: center;
 }
 
 img.imgdesc {
@@ -131,12 +133,16 @@ div.text {
 div.zone-article{
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Dicographie */
 article.discographie {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding: 20px 40px;
 }
 article.discographie-album{
@@ -145,6 +151,7 @@ article.discographie-album{
     justify-content: center;
     align-items: center;
     width: 20%;
+    margin: 4px;
 }
 
 div.article-disco {
@@ -152,11 +159,47 @@ div.article-disco {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    margin: 4px;
 }
 img.img-discographie {
     width: 100px;
     height: 100px;
 }
+
+article.evenement {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 40px;
+}
+
+img.img-evenement {
+    width: 100px;
+    height: 100px;
+    align-items: center;
+}
+
+article.derniere-sortie{
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    display: flex;    
+}
+
+div.liste-date{
+    display: flex;
+    flex-direction: row;
+}
+
+div.grp-date{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: right;
+    margin: 4px;
+}
+
 /* Responsive */
 @media (max-width: 768px){
     nav.nav-mobile {
