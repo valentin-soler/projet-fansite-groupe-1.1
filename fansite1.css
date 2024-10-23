@@ -14,7 +14,7 @@ main {
 header {
     font-family: 'Roboto', sans-serif;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     padding : 20px 50px;
     box-shadow: 0 1px 8px #636363;
@@ -200,6 +200,16 @@ div.grp-date{
     margin: 4px;
 }
 
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #717070;
+    color: white;
+    font-size: 12px;
+}
 /* Responsive */
 @media (max-width: 768px){
     nav.nav-mobile {
