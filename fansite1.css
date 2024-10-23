@@ -210,10 +210,20 @@ footer{
     color: white;
     font-size: 12px;
 }
+
+iframe.yt{
+    width: 350px;
+    height: 300px;
+    border: none;
+
+}
 /* Responsive */
 @media (max-width: 768px){
     nav.nav-mobile {
         display: flex;
+    }
+    header{
+        justify-content: flex-start;
     }
     nav.nav-pc {
         display: none;
