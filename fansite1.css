@@ -25,6 +25,7 @@ main {
     flex-direction: column;
     margin-top: 50px;
     font-family: "Roboto", sans-serif;
+    color: white;
 }
 
 /* Header + Barre de nav */
