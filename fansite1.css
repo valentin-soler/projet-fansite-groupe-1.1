@@ -32,7 +32,7 @@ main {
 header {
     font-family: 'Roboto', sans-serif;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     padding : 20px 50px;
     box-shadow: 0 1px 8px #636363;
@@ -43,8 +43,16 @@ header li {
     list-style: none;
     display: inline-block;
     padding : 0 20px;
+    margin: auto;
 }
 
+
+a.nav-link {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+}
 /* Ne pas afficher la navigation mobile par défaut */
 nav.nav-mobile {
     display: none;
@@ -228,9 +236,10 @@ footer{
     justify-content: center;
     align-items: center;
     padding: 20px;
+    margin: auto;
     background-color: #717070;
     color: white;
-    font-size: 12px;
+    font-size: 20px;
 }
 
 /* Affichage video YT */
