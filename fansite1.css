@@ -20,7 +20,7 @@
     object-fit: cover; /* S'assure que la vidéo couvre tout l'écran sans distorsion */
 }
 main {
-    z-index: 1;
+    z-index: 1; /* Permet de mettre le main en 1er plan */
     display: flex;
     flex-direction: column;
     margin-top: 50px;
@@ -44,6 +44,7 @@ header li {
     padding : 0 20px;
 }
 
+/* Ne pas afficher la navigation mobile par défaut */
 nav.nav-mobile {
     display: none;
 }
@@ -127,6 +128,7 @@ article.descavecimg {
     align-items: center;
 }
 
+/* Affichage Image */
 img.imgdesc {
     display: flex;
     flex-direction: row;
@@ -146,6 +148,7 @@ div.text {
     margin: 2px;
 }
 
+/* Zone dans les articles */
 div.zone-article{
     display: flex;
     flex-direction: row;
@@ -182,6 +185,7 @@ img.img-discographie {
     height: 100px;
 }
 
+/* Partie Evenement */
 article.evenement {
     display: flex;
     flex-direction: column;
@@ -216,6 +220,7 @@ div.grp-date{
     margin: 4px;
 }
 
+/* Footer */
 footer{
     display: flex;
     flex-direction: column;
@@ -227,13 +232,14 @@ footer{
     font-size: 12px;
 }
 
+/* Affichage video YT */
 iframe.yt{
     width: 350px;
     height: 300px;
     border: none;
 
 }
-/* Responsive */
+/* Responsive pour GSM */
 @media (max-width: 768px){
     nav.nav-mobile {
         display: flex;
