@@ -12,10 +12,22 @@
      font-style: normal;
  }
 
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Oswald', sans-serif;
+        background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
+        background-size: cover;
+        background-position: center;
+        color: white;
+    }
+ 
  h1,
- h2 {
+ h2,
+ .album {
      font-family: 'Merryweather';
      font-size: 30px;
+     color: #ffd700;
  }
 
  .disco {
@@ -24,6 +36,7 @@
  }
 
  #qui,
+ .copain,
  #Actu,
  #Real,
  #Evenement,
@@ -40,7 +53,7 @@
  }
 
  .chansons,
- .album {
+ .album-vid {
      display: flex;
      flex-direction: column;
      /* Les éléments à l'intérieur seront en liste verticale */
@@ -61,7 +74,10 @@
  #Discography ul {
      list-style-type: none;
  }
-
+.copain{
+    list-style-type: none;
+    text-align: center;
+}
  .album-vid {
      width: 100%;
      max-width: 800px;
@@ -97,6 +113,7 @@
      justify-content: center;
      align-items: center;
      position: relative;
+     
  }
 
  .banner-content::before {
@@ -114,7 +131,7 @@
  .banner-content h1,
  .banner-content p {
      position: relative;
-     color: white;
+     color: #ffd700;
      z-index: 2;
      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
  }
@@ -397,7 +414,27 @@
      z-index: 3;
      opacity: 90%;
      margin-right: 50px;
+     list-style-type: none;
+
  }
+ @media (max-width: 768px) {
+    .sidebar {
+        display: none;
+    }
+    #Discography {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .chansons,
+    .album-vid {
+        width: 100%;
+        margin: 0; /* Supprime l'espacement horizontal */
+    }
+}
+
 
  .sidebar ul {
      list-style-type: none;
@@ -406,6 +443,7 @@
  }
 
  .sidebar ul li {
+    list-style-type: none;
      margin: 10px 0;
  }
 
@@ -420,45 +458,14 @@
      /* Change la couleur au survol */
  }
 
- footer {
-    font-family: 'Roboto', sans-serif;
+ footer{
     display: flex;
-    justify-content: flex-start; /* Changez pour aligner les éléments à gauche */
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    padding: 20px 50px;
-    box-shadow: 0 -1px 8px #636363; /* Ombre inversée pour le bas */
+    padding: 20px;
+    margin: auto;
     background-color: #717070;
-    height: 58px;
-}
-
-#reseau {
-    display: flex; /* Utilise flex pour aligner les images en ligne */
-    justify-content: flex-start; /* Aligne les images à gauche */
-    align-items: center; /* Centre verticalement les images */
-}
-
-#reseau img {
-    width: 48px; /* Ajustez la taille de l'icône */
-    height: 48px; /* Ajustez la taille de l'icône */
-    margin-right: 10px; /* Ajoute un espace entre les icônes */
-}
-#fan {
-    display: flex;                      /* Utilise flex pour aligner les éléments en ligne */
-    align-items: center;               /* Centre verticalement les éléments */
-    justify-content: flex-end;          /* Aligne les éléments à droite */
-    flex-wrap: nowrap;                 /* Empêche les éléments de se déplacer sur une nouvelle ligne */
-}
-
-#fan ul {
-    display: flex;                     /* Utilise flex pour aligner les liens en ligne */
-    list-style-type: none;             /* Supprime les puces */
-    padding: 0;                        /* Supprime le padding par défaut */
-}
-
-#fan ul li {
-    margin-left: 20px;                 /* Espace entre les liens */
-}
-
-#fan h1 {
-    margin: 0;                        /* Supprime la marge du titre */
+    color: white;
+    font-size: 20px;
 }
