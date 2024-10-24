@@ -1,183 +1,382 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-main {
-    display: flex;
-    flex-direction: column;
-    margin-top: 50px;
-    font-family: "Roboto", sans-serif;
-}
+ @font-face {
+     font-family: 'oswald';
+     src: url("Image-font/oswald.ttf") format('TrueType');
+     font-weight: normal;
+     font-style: normal;
+ }
+ 
+ @font-face {
+     font-family: 'Merryweather';
+     src: url("Image-font/Merryweather.ttf") format('TrueType');
+     font-weight: normal;
+     font-style: normal;
+ }
 
-/* Header + Barre de nav */
-header {
-    font-family: 'Roboto', sans-serif;
+ h1,
+ h2 {
+     font-family: 'Merryweather';
+     font-size: 30px;
+ }
+ 
+ #qui,
+ #Actu,
+ #Real,
+ #Evenement,
+ #Discography {
+     font-family: "oswald";
+     font-size: 20px;
+     margin: 30px;
+ }
+ 
+ #Real ul {
+     list-style-type: none;
+ }
+ #Evenement ul {
+    list-style-type: none;
+}
+#Discography ul{
+    list-style-type: none;
+}
+ .wrapper-video {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
-    padding : 20px 50px;
-    box-shadow: 0 1px 8px #636363;
-    background-color: #717070;
-}
-
-header li {
-    list-style: none;
-    display: inline-block;
-    padding : 0 20px;
-}
-
-nav.nav-mobile {
-    display: none;
-}
-
-.mobilenav {
-    display: none;
-}
-/* Bouton Burger */
-.burger {
-    cursor: pointer;
-    display: inline-block;
-    width: 30px;
-    height: 25px;
-    position: relative;
-}
-
-.burger span {
-    display: block;
-    background-color: #333;
-    height: 3px;
     width: 100%;
-    border-radius: 2px;
-    position: absolute;
-    left: 0;
-    transition: 0.3s ease;
 }
 
-.burger span:nth-child(1) {
-    top: 0;
-}
-
-.burger span:nth-child(2) {
-    top: 10px;
-}
-
-.burger span:nth-child(3) {
-    top: 20px;
-}
-.buttonmenu:checked + .burger span:nth-child(1) {
-    transform: rotate(45deg);
-    top: 10px;
-}
-
-.buttonmenu:checked + .burger span:nth-child(2) {
-    opacity: 0;
-}
-
-.buttonmenu:checked + .burger span:nth-child(3) {
-    transform: rotate(-45deg);
-    top: 10px;
-}
-.buttonmenu {
-    display: none;
-}
-
-/* Contenu principal */
-
-div.container {
-    box-shadow: 0 1px 8px #ddd;
-    background-color: antiquewhite;
-    width: 90%;
-    margin: auto;
-}
-
-/* Titre */
-section.title{
-    display: flex;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 20px;
-    padding: 0 40px;
-    margin: auto;
-    justify-content: center;
-}
-
-/* Description avec Images (en ligne) */
-article.descavecimg {
-    display: flex;
-    flex-direction: column;
-    padding: 20px 40px;
-}
-
-/* Zone de texte */
-div.text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    width: 50%;
-    margin: 2px;
-}
-
-div.zone-article{
-    display: flex;
-    flex-direction: row;
-}
-/* Responsive */
-@media (max-width: 768px){
-    nav.nav-mobile {
-        display: flex;
-    }
-    nav.nav-pc {
-        display: none;
-    }
-    .buttonmenu:checked + .mobilenav{
-        display: flex;
-        flex-direction: column;
-        
-    }
-}
-
----------------------------------------
-/* (PART A) SHOW SELECTED SLIDE ONLY */
-.slides input[type="radio"] { display: none; }
-.slides figure {
-  visibility: hidden; opacity: 0;
-  transition: all 0.5s;
-}
-.slides input[type="radio"]:checked + figure {
-  visibility: visible; opacity: 1;
-}
-/* (PART B) SLIDES WRAPPER & SHARED */
-.slides {
+.video-container {
     position: relative;
-    max-width: 600px; height: 400px;
-  }
-  .slides img, .slides figcaption, .slides label {
+    width: 33%; /* 33% de la largeur de l'écran */
+    padding-bottom: 18.56%; /* Ratio 16:9 = (9/16)*100 */
+    height: 0;
+}
+
+.video-container iframe {
     position: absolute;
-  }
-  .slides label, .slides figcaption {
-    color: #fff; background: rgba(0, 0, 0, 0.7);
-  }
-  
-  /* (PART C) SLIDE IMAGES */
-  .slides img {
-    top: 0; left: 0;
-    width: 100%; height: 100%; object-fit: cover;
-  }
-  
-  /* (PART D) SLIDE CAPTION */
-  .slides figcaption {
-    bottom: 0; left: 0;
-    width: 100%; padding: 10px; text-align: center;
-  }
-  
-  /* (PART E) LAST & NEXT BUTTONS */
-  .slides label {
-    top: 50%; transform: translateY(-50%); 
-    display: flex; align-items: center; justify-content: center;
-    width: 50px; height: 50px; border-radius: 50%;
-    font-size: 1.5em; cursor: pointer;
-  }
-  .slides label.last { left: 10px; }
-  .slides label.next { right: 10px; }
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+ 
+ .banner-content {
+     width: 100%;
+     height: 400px;
+     background-image: url('Image-font/fond.png');
+     /* Remplace TON_IMAGE.png par le chemin de l'image de ta bannière */
+     background-size: cover;
+     background-position: center;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     position: relative;
+ }
+ 
+ .banner-content::before {
+     content: '';
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background: rgba(0, 0, 0, 0.5);
+     /* Filtre sombre pour lisibilité */
+     z-index: 1;
+ }
+ 
+ .banner-content h1,
+ .banner-content p {
+     position: relative;
+     color: white;
+     z-index: 2;
+     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+ }
+ 
+ .banner-content h1 {
+     font-size: 4em;
+ }
+ 
+ .banner-content p {
+     position: absolute;
+     bottom: 10px;
+     /* Positionne le texte à 10px du bas */
+     right: 10px;
+     /* Positionne le texte à 10px de la droite */
+     font-size: 1.5em;
+ }
+ 
+ .titre {
+     font-family: "feu", sans-serif;
+     font-size: 30px;
+ }
+ 
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+ 
+ main {
+     display: flex;
+     flex-direction: column;
+     margin-top: 50px;
+     font-family: "Roboto", sans-serif;
+ }
+ /* Header + Barre de nav */
+ 
+ header {
+     font-family: 'Roboto', sans-serif;
+     display: flex;
+     justify-content: flex-start;
+     align-items: center;
+     padding: 20px 50px;
+     box-shadow: 0 1px 8px #636363;
+     background-color: #717070;
+ }
+ 
+ header li {
+     list-style: none;
+     display: inline-block;
+     padding: 0 20px;
+ }
+ 
+ nav.nav-mobile {
+     display: none;
+ }
+ 
+ .mobilenav {
+     display: none;
+ }
+ /* Bouton Burger */
+ 
+ .burger {
+     cursor: pointer;
+     display: inline-block;
+     width: 30px;
+     height: 25px;
+     position: relative;
+ }
+ 
+ .burger span {
+     display: block;
+     background-color: #333;
+     height: 3px;
+     width: 100%;
+     border-radius: 2px;
+     position: absolute;
+     left: 0;
+     transition: 0.3s ease;
+ }
+ 
+ .burger span:nth-child(1) {
+     top: 0;
+ }
+ 
+ .burger span:nth-child(2) {
+     top: 10px;
+ }
+ 
+ .burger span:nth-child(3) {
+     top: 20px;
+ }
+ 
+ .buttonmenu:checked+.burger span:nth-child(1) {
+     transform: rotate(45deg);
+     top: 10px;
+ }
+ 
+ .buttonmenu:checked+.burger span:nth-child(2) {
+     opacity: 0;
+ }
+ 
+ .buttonmenu:checked+.burger span:nth-child(3) {
+     transform: rotate(-45deg);
+     top: 10px;
+ }
+ 
+ .buttonmenu {
+     display: none;
+ }
+ /* Contenu principal */
+ 
+ div.container {
+     box-shadow: 0 1px 8px #ddd;
+     background-color: antiquewhite;
+     width: 90%;
+     margin: auto;
+ }
+ /* Titre */
+ 
+ section.title {
+     display: flex;
+     font-weight: 400;
+     font-style: normal;
+     font-size: 20px;
+     padding: 0 40px;
+     margin: auto;
+     justify-content: center;
+ }
+ /* Description avec Images (en ligne) */
+ 
+ article.descavecimg {
+     display: flex;
+     flex-direction: column;
+     padding: 20px 40px;
+ }
+ /* Zone de texte */
+ 
+ div.text {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     text-align: center;
+     width: 50%;
+     margin: 2px;
+ }
+ 
+ div.zone-article {
+     display: flex;
+     flex-direction: row;
+ }
+ /* Responsive */
+ 
+ @media (max-width: 768px) {
+     nav.nav-mobile {
+         display: flex;
+     }
+     nav.nav-pc {
+         display: none;
+     }
+     .buttonmenu:checked+.mobilenav {
+         display: flex;
+         flex-direction: column;
+     }
+ }
+ 
+ ---------------------------------------
+ /* (PART A) SHOW SELECTED SLIDE ONLY */
+ 
+ .slides input[type="radio"] {
+     display: none;
+     visibility: hidden;
+ }
+ 
+ .slides figure {
+     visibility: hidden;
+     opacity: 0;
+     transition: all 0.5s;
+ }
+ 
+ .slides input[type="radio"]:checked+figure {
+     visibility: visible;
+     opacity: 1;
+ }
+ /* (PART B) SLIDES WRAPPER & SHARED */
+ 
+ .wrapper-slides {
+     display: grid;
+     grid-template-columns: 1fr 1fr 1fr;
+     gap: 10px;
+     grid-auto-rows: minmax(100px, auto);
+ }
+ 
+ .slides {
+     grid-column: 2;
+     position: relative;
+     max-width: 600px;
+     height: 400px;
+ }
+ 
+ .slides img,
+ .slides figcaption,
+ .slides label {
+     position: absolute;
+ }
+ 
+ .slides label,
+ .slides figcaption {
+     color: #fff;
+     background: rgba(0, 0, 0, 0.7);
+ }
+ /* (PART C) SLIDE IMAGES */
+ 
+ .slides img {
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+ }
+ /* (PART D) SLIDE CAPTION */
+ 
+ .slides figcaption {
+     bottom: 0;
+     left: 0;
+     width: 100%;
+     padding: 10px;
+     text-align: center;
+ }
+ /* (PART E) LAST & NEXT BUTTONS */
+ 
+ .slides label {
+     top: 50%;
+     transform: translateY(-50%);
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     width: 50px;
+     height: 50px;
+     border-radius: 50%;
+     font-size: 1.5em;
+     cursor: pointer;
+ }
+ 
+ .slides label.last {
+     left: 10px;
+ }
+ 
+ .slides label.next {
+     right: 10px;
+ }
+ 
+ .sidebar {
+     position: sticky;
+     /* Garde la barre latérale en place lors du défilement */
+     top: 10%;
+     left: 90%;
+     width: 20%;
+     /* Vous pouvez définir cette valeur en pixels si vous voulez un carré exact */
+     height: 20%;
+     /* Assurez-vous que cette valeur correspond à la largeur pour un carré */
+     background-color: #f2f2f2;
+     /* Couleur de fond */
+     padding: 10px;
+     border-radius: 5px;
+     /* Si vous souhaitez garder les bords arrondis, sinon mettez 0 */
+     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+     z-index: 3;
+     opacity: 90%;
+     margin-right: 50px;
+ }
+ 
+ .sidebar ul {
+     list-style-type: none;
+     /* Retire les puces des listes */
+     padding: 0;
+ }
+ 
+ .sidebar ul li {
+     margin: 10px 0;
+ }
+ 
+ .sidebar ul li a {
+     text-decoration: none;
+     color: #000;
+     font-weight: bold;
+ }
+ 
+ .sidebar ul li a:hover {
+     color: #ff0000;
+     /* Change la couleur au survol */
+ }
