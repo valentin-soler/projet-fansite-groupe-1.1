@@ -18,6 +18,10 @@
      font-size: 30px;
  }
  
+ .disco{
+    text-align: center;
+    margin-top: 25px;
+ }
  #qui,
  #Actu,
  #Real,
@@ -27,7 +31,17 @@
      font-size: 20px;
      margin: 30px;
  }
- 
+ #Discography {
+    display: flex;
+    justify-content: space-between; /* Espace entre les deux colonnes */
+  }
+
+  .chansons, .album {
+    display: flex;
+    flex-direction: column; /* Les éléments à l'intérieur seront en liste verticale */
+    flex: 1; /* Les deux colonnes auront la même largeur */
+    margin: 0 10px; /* Un petit espace entre les colonnes */
+  }
  #Real ul {
      list-style-type: none;
  }
