@@ -240,6 +240,14 @@ iframe.yt{
     border: none;
 
 }
+
+/* Affichage musique Spotify */
+iframe.spotify{
+    border-radius: 12px;
+    width: 100;
+    height: 152;
+    border: none;
+}
 /* Responsive pour GSM */
 @media (max-width: 768px){
     nav.nav-mobile {
