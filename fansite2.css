@@ -170,93 +170,156 @@ h2,
     box-sizing: border-box;
 }
 
-/* Mise en forme de la section main */
 main {
     display: flex;
     flex-direction: column;
+    /* Dispose les éléments en colonne */
     margin-top: 10px;
+    /* Marge supérieure de 10px */
     font-family: "Roboto", sans-serif;
+    /* Police de caractères Roboto */
 }
 
-/* En-tête avec styles */
 header {
     font-family: 'Roboto', sans-serif;
+    /* Police de caractères Roboto pour l'en-tête */
     display: flex;
     justify-content: space-between;
+    /* Espace entre les éléments de l'en-tête */
     align-items: center;
+    /* Centre verticalement les éléments de l'en-tête */
     padding: 20px 50px;
+    /* Padding de 20px en haut/bas et 50px sur les côtés */
     box-shadow: 0 1px 8px #636363;
+    /* Ombre pour l'effet visuel de profondeur */
     background-color: #717070;
+    /* Couleur de fond de l'en-tête */
 }
 
 header li {
     list-style: none;
+    /* Supprime les puces de liste */
     display: inline-block;
+    /* Affiche les éléments en ligne */
     padding: 0 20px;
+    /* Padding horizontal de 20px */
+    margin: auto;
+    /* Centre verticalement chaque élément */
 }
 
-/* Style des liens dans l'en-tête */
 a.nav-link {
     text-decoration: none;
+    /* Supprime le soulignement des liens */
     color: white;
+    /* Couleur du texte des liens */
     font-size: 16px;
+    /* Taille de police des liens */
     font-weight: 500;
+    /* Epaisseur de la police des liens */
 }
 
-/* Navigation mobile masquée par défaut */
+/* Ne pas afficher la navigation mobile par défaut */
 nav.nav-mobile {
     display: none;
+    /* Cache la navigation mobile par défaut */
 }
 
-/* Bouton burger */
+.mobilenav {
+    display: none;
+    /* Cache la navigation mobile */
+}
+
+/* Bouton Burger */
 .burger {
     cursor: pointer;
+    /* Change le curseur en pointeur pour indiquer un clic */
     display: inline-block;
+    /* Affiche en ligne */
     width: 30px;
+    /* Largeur du bouton */
     height: 25px;
+    /* Hauteur du bouton */
     position: relative;
+    /* Position relative pour positionner les spans */
 }
 
 .burger span {
     display: block;
+    /* Affiche chaque span en bloc */
     background-color: #333;
+    /* Couleur de fond des spans */
     height: 3px;
+    /* Hauteur de chaque ligne */
     width: 100%;
+    /* Largeur maximale */
     border-radius: 2px;
+    /* Coins arrondis pour chaque ligne */
     position: absolute;
+    /* Position absolue */
     left: 0;
+    /* Aligne les spans à gauche */
     transition: 0.3s ease;
+    /* Transition douce pour l'animation */
 }
 
 .burger span:nth-child(1) {
     top: 0;
+    /* Positionne la première ligne en haut */
 }
 
 .burger span:nth-child(2) {
     top: 10px;
+    /* Positionne la deuxième ligne au centre */
 }
 
 .burger span:nth-child(3) {
     top: 20px;
+    /* Positionne la troisième ligne en bas */
 }
 
-/* Animation pour l'icône burger lorsqu'activé */
+/* Animation du bouton burger lors de l'ouverture du menu */
 .buttonmenu:checked+.burger span:nth-child(1) {
     transform: rotate(45deg);
+    /* Rotation de 45 degrés */
     top: 10px;
+    /* Positionne la première ligne au centre */
 }
 
 .buttonmenu:checked+.burger span:nth-child(2) {
     opacity: 0;
+    /* Cache la deuxième ligne */
 }
 
 .buttonmenu:checked+.burger span:nth-child(3) {
     transform: rotate(-45deg);
+    /* Rotation de -45 degrés */
     top: 10px;
+    /* Positionne la troisième ligne au centre */
 }
 
 .buttonmenu {
     display: none;
+    /* Cache la case à cocher */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    nav.nav-mobile {
+        display: flex;
+        /* Affiche la navigation mobile en flex */
+    }
+
+    nav.nav-pc {
+        display: none;
+        /* Cache la navigation de bureau */
+    }
+
+    .buttonmenu:checked+.mobilenav {
+        display: flex;
+        /* Affiche la navigation mobile en flex */
+        flex-direction: column;
+        /* Organise les éléments en colonne */
+    }
 }
 
 /* Affiche la diapositive sélectionnée */
