@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="contact.css"> <!-- Lien vers le fichier CSS pour la mise en forme -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"> <!-- Lien vers la bibliothèque Font Awesome pour les icônes -->
+    <title>Contact</title> <!-- Titre de la page -->
+</head>
+<body>
+    <!-- Header + Reponsive pour GSM -->
+    <header>
+        <nav class="nav-pc"> <!-- Navigation pour les écrans de bureau -->
+            <ul>
+                <li>
+                    <a href="index.html" class="nav-link">
+                    </a> <!-- Lien vers la page d'accueil (icône potentielle) -->
+                </li>
+                <li><a href="index.html" class="nav-link">Site de Fan</a></li> <!-- Lien vers la page d'accueil -->
+                <li><a href="fansite2.html" class="nav-link">Fan de Johnny</a></li> <!-- Lien vers la page de Johnny -->
+                <li><a href="fansite1.html" class="nav-link">Fan de CRO</a></li> <!-- Lien vers la page de CRO -->
+                <li><a href="fansite3.html" class="nav-link">Fan de Denzel</a></li> <!-- Lien vers la page de Denzel -->
+                <li><a href="contact.html" class="nav-link">Contact</a></li> <!-- Lien vers la page de contact -->
+            </ul>
+        </nav>
+        <nav class="nav-mobile"> <!-- Navigation pour les écrans mobiles -->
+            <label for="buttonmenu" class="burger"> <!-- Bouton burger pour ouvrir le menu mobile -->
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <input type="checkbox" id="buttonmenu" class="buttonmenu"> <!-- Case à cocher pour contrôler l'ouverture du menu -->
+            <ul class="mobilenav">
+                <li>
+                    <a href="index.html" class="nav-link">
+                    </a> <!-- Lien vers la page d'accueil (icône potentielle) -->
+                </li>
+                <li><a href="index.html" class="nav-link">Site de Fan</a></li> <!-- Lien vers la page d'accueil -->
+                <li><a href="fansite2.html" class="nav-link">Fan de Johnny</a></li> <!-- Lien vers la page de Johnny -->
+                <li><a href="fansite1.html" class="nav-link">Fan de CRO</a></li> <!-- Lien vers la page de CRO -->
+                <li><a href="fansite3.html" class="nav-link">Fan de Denzel</a></li> <!-- Lien vers la page de Denzel -->
+                <li><a href="contact.html" class="nav-link">Contact</a></li> <!-- Lien vers la page de contact -->
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <h1>Contactez-moi</h1> <!-- Titre principal de la page de contact -->
+        <form class="contact-form"> <!-- Formulaire de contact -->
+            <label for="destinataire">Destinataire:</label> <!-- Étiquette pour le champ de sélection du destinataire -->
+            <select id="destinataire" name="destinataire"> <!-- Liste déroulante pour choisir le destinataire -->
+                <option value="info">Informations</option> <!-- Option pour le destinataire Informations -->
+                <option value="Cro">Fan de Cro</option> <!-- Option pour le destinataire Fan de Cro -->
+                <option value="Johnny">Fan de Johnny</option> <!-- Option pour le destinataire Fan de Johnny -->
+                <option value="Denzel">Fan de Denzel</option> <!-- Option pour le destinataire Fan de Denzel -->
+            </select>
+
+            <label for="nom">Nom:</label> <!-- Étiquette pour le champ du nom -->
+            <input type="text" id="nom" name="nom" required> <!-- Champ de texte pour le nom -->
+
+            <label for="email">Email:</label> <!-- Étiquette pour le champ de l'email -->
+            <input type="email" id="email" name="email" required> <!-- Champ de texte pour l'email -->
+
+            <label for="message">Message:</label> <!-- Étiquette pour le champ du message -->
+            <textarea id="message" name="message" rows="5" required></textarea> <!-- Champ de texte pour le message -->
+
+            <button type="submit">Envoyer</button> <!-- Bouton pour soumettre le formulaire -->
+        </form>
+    </main>
+
+    <!-- Footer avec Copyright + RS -->
+    <footer>
+        <p><a href="index.html">Index</a> <a href="fansite1.html">CRO</a> <a href="fansite2.html">Jhonny</a> <a
+            href="fansite3.html">Denzel</a> <a href="contact.html">Contact</a></p>
+    <p>
+        <p>&copy; 2024 - Site de Fan</p> <!-- Texte de copyright pour le site -->
+    </footer>
+</body>
+</html>
