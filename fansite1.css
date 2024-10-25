@@ -1,3 +1,4 @@
+/* S'applique a tout */
 * {
     margin: 0;
     padding: 0;
@@ -19,6 +20,8 @@
     height: 100%;
     object-fit: cover; /* S'assure que la vidéo couvre tout l'écran sans distorsion */
 }
+
+/* Zone principale page CRO */
 main.cro {
     z-index: 1; /* Permet de mettre le main en 1er plan */
     display: flex;
@@ -29,7 +32,7 @@ main.cro {
     color: white;
     
 }
-
+ /* Zone principale page Index */
 section.index {
     display: flex;
     flex-direction: row;
@@ -344,6 +347,7 @@ iframe.spotify{
 }
 /* Responsive pour GSM */
 @media (max-width: 768px){
+    /* Responsive Menu */
     nav.nav-mobile {
         display: flex;
     }
@@ -358,6 +362,7 @@ iframe.spotify{
         flex-direction: column;
         
     }
+    /* Responsive Article + Index */
     div.article-disco{
         flex-direction: column;
     }
