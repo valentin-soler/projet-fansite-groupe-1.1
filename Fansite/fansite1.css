@@ -1,0 +1,379 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Fond vidéo */
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1; /* Permet de mettre la vidéo en arrière-plan */
+}
+
+.video-background .video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* S'assure que la vidéo couvre tout l'écran sans distorsion */
+}
+main.cro {
+    z-index: 1; /* Permet de mettre le main en 1er plan */
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-family: "Roboto", sans-serif;
+    color: white;
+    
+}
+
+section.index {
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-family: "Roboto", sans-serif;
+    flex: 1;
+    justify-content: center;
+}
+
+section.titre-index {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    font-family: "Roboto", sans-serif;
+    justify-content: center;
+    align-items: center;
+}
+
+section.index-fan{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 40px;
+    width: 33%;
+    border: #333 1px solid;
+}
+section.index-fan{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 40px;
+    width: 33%;
+    border: #333 1px solid;
+}
+a.index-cro{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 40px;
+    width: 33%;
+    border: #333 1px solid;
+    background-image: url("image_index/cro.jpg");
+    background-size: cover;
+    color: white;
+    min-height: 70vh;
+    text-decoration: none;
+}
+
+
+
+a.index-johnny{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 40px;
+    width: 33%;
+    border: #333 1px solid;
+    background-image: url("image_index/Johnny.jpg");
+    background-size: cover;
+    color: white;
+    min-height: 60vh;
+    text-decoration: none;
+}
+a.index-denzel{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 40px;
+    width: 33%;
+    border: #333 1px solid;
+    background-image: url("image_index/denzel.webp");
+    background-size: cover;
+    color: white;
+    min-height: 60vh;
+    text-decoration: none;
+}
+
+/* Header + Barre de nav */
+header {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding : 20px 50px;
+    box-shadow: 0 1px 8px #636363;
+    background-color: #717070;
+}
+
+header li {
+    list-style: none;
+    display: inline-block;
+    padding : 0 20px;
+    margin: auto;
+}
+
+
+a.nav-link {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+}
+/* Ne pas afficher la navigation mobile par défaut */
+nav.nav-mobile {
+    display: none;
+}
+
+.mobilenav {
+    display: none;
+}
+/* Bouton Burger */
+.burger {
+    cursor: pointer;
+    display: inline-block;
+    width: 30px;
+    height: 25px;
+    position: relative;
+}
+
+.burger span {
+    display: block;
+    background-color: #333;
+    height: 3px;
+    width: 100%;
+    border-radius: 2px;
+    position: absolute;
+    left: 0;
+    transition: 0.3s ease;
+}
+
+.burger span:nth-child(1) {
+    top: 0;
+}
+
+.burger span:nth-child(2) {
+    top: 10px;
+}
+
+.burger span:nth-child(3) {
+    top: 20px;
+}
+.buttonmenu:checked + .burger span:nth-child(1) {
+    transform: rotate(45deg);
+    top: 10px;
+}
+
+.buttonmenu:checked + .burger span:nth-child(2) {
+    opacity: 0;
+}
+
+.buttonmenu:checked + .burger span:nth-child(3) {
+    transform: rotate(-45deg);
+    top: 10px;
+}
+.buttonmenu {
+    display: none;
+}
+
+/* Contenu principal */
+
+.container {
+    backdrop-filter: blur(25px);
+    width: 80%;
+    margin: auto;
+}
+
+/* Titre */
+section.title{
+    display: flex;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    padding: 0 40px;
+    margin: auto;
+    justify-content: center;
+}
+
+/* Description avec Images (en ligne) */
+article.descavecimg {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Affichage Image */
+img.imgdesc {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: inherit;
+}
+
+/* Zone de texte */
+div.text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 50%;
+    margin: 2px;
+}
+
+/* Zone dans les articles */
+div.zone-article{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Dicographie */
+article.discographie {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 40px;
+}
+article.discographie-album{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    margin: 4px;
+}
+
+div.article-disco {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 4px;
+}
+img.img-discographie {
+    width: 100px;
+    height: 100px;
+}
+
+/* Partie Evenement */
+article.evenement {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 40px;
+}
+
+img.img-evenement {
+    width: 100px;
+    height: 100px;
+    align-items: center;
+}
+
+article.derniere-sortie{
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    display: flex;    
+}
+
+div.liste-date{
+    display: flex;
+    flex-direction: row;
+}
+
+div.grp-date{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: right;
+    margin: 4px;
+}
+
+/* Footer */
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin: auto;
+    background-color: #717070;
+    color: white;
+    font-size: 20px;
+}
+
+/* Affichage video YT */
+iframe.yt{
+    width: 350px;
+    height: 300px;
+    border: none;
+
+}
+
+/* Affichage musique Spotify */
+iframe.spotify{
+    border-radius: 12px;
+    width: 100;
+    height: 152;
+    border: none;
+}
+/* Responsive pour GSM */
+@media (max-width: 768px){
+    nav.nav-mobile {
+        display: flex;
+    }
+    header{
+        justify-content: flex-start;
+    }
+    nav.nav-pc {
+        display: none;
+    }
+    .buttonmenu:checked + .mobilenav{
+        display: flex;
+        flex-direction: column;
+        
+    }
+    div.article-disco{
+        flex-direction: column;
+    }
+    div.zone-article{
+        flex-direction: column;
+    }
+    section.index{
+        flex-direction: column;
+    }
+    a.index-cro{
+        width: 100%;
+    }
+    a.index-johnny{
+        width: 100%;
+    }
+    a.index-denzel{
+        width: 100%;
+    }
+}
