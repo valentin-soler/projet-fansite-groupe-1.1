@@ -363,6 +363,15 @@ nav.nav-mobile {
 
 /* Masquer la barre latérale sur petits écrans */
 @media (max-width: 768px) {
+    nav.nav-mobile {
+        display: flex;
+        /* Affiche la navigation mobile en flex */
+    }
+
+    nav.nav-pc {
+        display: none;
+        /* Cache la navigation de bureau */
+    }
     .sidebar {
         display: none;
     }
