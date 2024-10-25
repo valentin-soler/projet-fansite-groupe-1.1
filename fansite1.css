@@ -61,15 +61,6 @@ section.index-fan{
     width: 33%;
     border: #333 1px solid;
 }
-section.index-fan{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px 40px;
-    width: 33%;
-    border: #333 1px solid;
-}
 a.index-cro{
     display: flex;
     flex-direction: column;
