@@ -97,7 +97,7 @@
 
 }
 body{
-    background-color: burlywood;
+    background-color:rgb(172, 171, 171);
     margin: 0px;
     padding: 0px;
 }
@@ -165,5 +165,56 @@ body{
     aspect-ratio: 16/9;
 
 }
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin: auto;
+    background-color: #717070;
+    color: white;
+    font-size: 20px;
+ }
+@media screen and  (max-width: 1000px) {
+    .photos {
+        display: flex;
+        flex-direction: column;
+        justify-content:space-between;
+    justify-items:center;
+    justify-content: center;
+    width: 200px;
+    height: 310px;
+    }
+    .item {
+        margin: 35px;
+        display: flex;
+        flex-direction: column;
+        justify-content:space-between;
+    justify-items:center;
+    justify-content: center;
+    justify-content: space-around;
+    width: 200px;
+    height: 310px;
+    }
+    .films {
+        display: flex;
+        flex-direction: column;
+        justify-content:space-between;
+    justify-items:center;
+    justify-content: center;
+    justify-content: space-around;
+    }
+    .item {
+        margin: 35px;
+        display: flex;
+        flex-direction: column;
+        justify-content:space-between;
+    justify-items:center;
+    justify-content: center;
+    justify-content: space-around;
+    }
+}
+
 
 
