@@ -1,0 +1,169 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    list-style: none;
+}
+.header {
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+    background-color:burlywood;
+}
+.navbar{
+    position: absolute;
+    padding: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+.navbar .logo {
+    color:white;
+    font-size: 2em;
+    font-weight: bold;
+
+}
+.navbar .nav-links ul{ 
+    display: flex;
+
+}
+.navbar .nav-links ul li{ 
+    margin: 0 25px;
+}
+.navbar .nav-links ul li.active a { 
+    color: red;
+    font-weight: 600;
+}
+.navbar .menu-hamburger {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 30px;
+    width: 35px;
+}
+
+@media screen and (max-width: 900px) {
+    .navbar{
+        padding: 0;
+    }
+    .navbar .logo {
+        position: absolute;
+        top: 40px;
+        left: 30px; 
+
+    }
+    .navbar .menu-hamburger {
+        display: block;
+    }
+
+    .nav-links { 
+        top: 0;
+        left: 0;
+        position: absolute;
+        color: rgb(245, 243, 243);
+        backdrop-filter: blur(7px);
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: -100%;
+        transition: all 0.5s ease;
+    }
+    .nav-links.mobile-menu {
+        margin-left: 0;
+    
+    }
+    .nav-links ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .navbar .nav-links ul li{ 
+        margin:25px 0;
+        font-size: 1.2em;
+    }
+    .Bandeau{
+        background-color: gray;
+        height: 130px;
+        padding: auto;}
+}
+    ul li a{
+        color: #fff;
+        letter-spacing: 0.1rem;
+        text-align: right;
+
+}
+body{
+    background-color: burlywood;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+.description1 {
+    .description{
+        margin: 35px;
+        p1{
+            font-size: xx-large;
+            text-decoration:underline;
+        }
+        p2{
+            font-size: larger;
+            text-align: center;
+        }
+    }
+}
+.Réalisation {
+    .Cinématographie{
+        margin: 35px;
+        p1{
+            font-size: xx-large;
+            text-decoration:underline;
+            
+        }
+        p2{
+            font-size: larger;
+            text-align: center;
+        }
+    }
+}
+.événements {
+    .Evenements {
+        margin: 35px;
+        p1{
+            font-size: xx-large;
+            text-decoration:underline;
+        }
+        p2{
+            font-size: larger;
+            text-align: center;
+        }
+    }
+}
+
+
+.body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ 
+}
+.yt-responsive{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    margin: 45px;
+
+}
+.yt-responsive iframe{
+    aspect-ratio: 16/9;
+
+}
+
+
