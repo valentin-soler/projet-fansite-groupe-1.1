@@ -1,0 +1,22 @@
+@media screen {
+    .photos{
+       display: flex;
+      justify-content: center;
+     justify-content: space-evenly;
+    }
+}
+.item{
+    width: 100px;
+    height: 100px;
+ 
+}
+.films{
+    display: flex;
+   justify-content: center;
+   justify-content: space-evenly;
+}
+.item{
+    width: 100px;
+    height: 100px;
+ 
+}
