@@ -32,10 +32,7 @@
 .navbar .nav-links ul li{ 
     margin: 0 25px;
 }
-.navbar .nav-links ul li.active a { 
-    color: red;
-    font-weight: 600;
-}
+
 .navbar .menu-hamburger {
     display: none;
     position: absolute;
